@@ -1,5 +1,10 @@
 <div class="container">
   <h3><%= @cocktail.name %></h3>
+    <% if @cocktail.photo.present? %>
+      <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
+    <% else %>
+      <%= image_tag "http://placehold.it/400x300" %>
+    <% end %>
     <% @cocktail.doses.each do |dose|%>
     <ul>
       <li><%= dose.ingredient.name %>: <%= dose.description %>

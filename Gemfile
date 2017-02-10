@@ -47,8 +47,11 @@ gem "simple_form"
 gem "autoprefixer-rails"
 
 # Data security
-
 gem "figaro"
+
+# Image stock on cloud service
+gem "cloudinary", '1.1.0'
+gem "carrierwave"
 
 
 group :development, :test do
